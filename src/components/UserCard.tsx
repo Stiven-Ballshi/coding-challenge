@@ -17,29 +17,59 @@ type Props = {
 };
 
 function UserCard({ users }: Props) {
+  const checkBgColor = (usrIndex: number) => {
+    if (usrIndex % 2 === 0) return "#B5BCF9";
+
+    return "#BEE3CA";
+  };
+
+  const checkTextColor = (usrIndex: number) => {
+    if (usrIndex % 2 === 0) return "#3E4144";
+
+    return "#000000";
+  };
+
   return (
     <>
       {users.map((user, userIndex) => (
-        <Card key={userIndex} className={styles.userCard}>
-          <MoreSettings className={styles.moreSettings} />
+        <Card
+          style={{ background: checkBgColor(userIndex) }}
+          key={userIndex}
+          className={styles.userCard}
+        >
+          <MoreSettings
+            style={{ color: checkTextColor(userIndex) }}
+            className={styles.moreSettings}
+          />
 
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          <Box className={styles.userCard__image_box}>
+            <Avatar className={styles.avatar} src={user.picture.medium} />
+          </Box>
+
           <CardContent>
             <Typography
+              style={{ color: checkTextColor(userIndex) }}
               className={styles.userCard__name}
               gutterBottom
               variant="h5"
             >
-              {user.name.first} {user.name.last}
+              {user.name.first || "Not Provided"}{" "}
+              {user.name.last || "Not Provided"}
             </Typography>
-            <Box className={styles.userCard__wrapper}>
-              <PhoneIcon />
+            <Box
+              style={{ color: checkTextColor(userIndex) }}
+              className={styles.userCard__wrapper}
+            >
+              <EmailIcon />
               <Typography className={styles.userCard__info} variant="h6">
-                {user.phone}
+                {user.phone || "Not Provided"}
               </Typography>
             </Box>
-            <Box className={styles.userCard__wrapper}>
-              <EmailIcon /> {user.email}
+            <Box
+              style={{ color: checkTextColor(userIndex) }}
+              className={styles.userCard__wrapper}
+            >
+              <PhoneIcon /> {user.email || "Not Provided"}
               <Typography
                 className={styles.userCard__info}
                 variant="h6"
