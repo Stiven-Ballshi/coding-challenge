@@ -1,7 +1,24 @@
 .header {
   background-color: black;
 
-  padding:35px 0;
+  position: sticky;
+  top: 0;
+
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+
+  z-index: 100;
+
+  transition: height .5s ease-in;
+
+  &.sticky {
+    height: 60px !important;
+  }
 
   &__container {
     display: flex;
