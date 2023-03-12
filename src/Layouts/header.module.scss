@@ -1,0 +1,26 @@
+.header {
+  background-color: black;
+
+  padding:35px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  &__link {
+    font-size: 18px;
+
+    transition: underline .25s ease-in-out;
+
+    color: white;
+
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

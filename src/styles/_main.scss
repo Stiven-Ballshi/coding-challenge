@@ -1,0 +1,66 @@
+@import "./utils/typography";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+// ###############
+// Default Styling
+// ###############
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  outline: none;
+
+  -webkit-appearance: none;
+
+  font-family: 'Roboto';
+}
+
+body {
+  position: relative;
+
+  font-size: 16px;
+
+  background-color: #3E4144;
+
+
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ScrollBard */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Handle */
+
+// ::-webkit-scrollbar-thumb {
+//   background-color: var(--gray-300);
+//   border-radius: var(--border-radius);
+//   transition: background-color var(--transition-duration)
+//     var(--transition-animation);
+
+//   &:hover {
+//     background-color: gray;
+//   }
+// }
+
+// Svg Icons Default Config
+.icon {
+  width: 24px;
+  height: 24px;
+
+  color: currentColor;
+}
