@@ -1,11 +1,12 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import { getUsers } from "../services/users";
+import CircularProgress from "@mui/material/CircularProgress";
 
-import { Result } from "../types/users";
+import { getUsers } from "../../services/users";
 
-import UserCard from "../components/UserCard/UserCard";
+import { Result } from "../../types/users";
+
+import UserCard from "../../components/UserCard/UserCard";
 
 import styles from "./Landing.module.scss";
 

@@ -4,8 +4,8 @@ import { Route, Routes } from "react-router-dom";
 // import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
 
-import LandingPage from "./pages/LandingPage";
-import UsersPage from "./pages/UsersPage";
+import LandingPage from "./pages/Landing/LandingPage";
+import UsersPage from "./pages/Users/UsersPage";
 
 import styles from "./mainpage.module.scss";
 
