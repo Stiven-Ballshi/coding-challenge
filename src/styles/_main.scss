@@ -14,8 +14,6 @@
 
   outline: none;
 
-  -webkit-appearance: none;
-
   font-family: 'Roboto';
 }
 
@@ -25,8 +23,6 @@ body {
   font-size: 16px;
 
   background-color: #3E4144;
-
-
 }
 
 a {
@@ -38,24 +34,16 @@ ul {
   list-style: none;
 }
 
-/* ScrollBard */
-/* width */
-::-webkit-scrollbar {
-  width: 3px;
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: gray;
+  transition: background-color var(--transition-duration)
+    var(--transition-animation);
+
+  &:hover {
+    background-color: gray;
+  }
 }
-
-/* Handle */
-
-// ::-webkit-scrollbar-thumb {
-//   background-color: var(--gray-300);
-//   border-radius: var(--border-radius);
-//   transition: background-color var(--transition-duration)
-//     var(--transition-animation);
-
-//   &:hover {
-//     background-color: gray;
-//   }
-// }
 
 // Svg Icons Default Config
 .icon {

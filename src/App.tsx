@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Route, Routes } from "react-router-dom";
-import Footer from "./Layouts/Footer";
-import Header from "./Layouts/Header";
+// import Footer from "./layouts/Footer";
+import Header from "./layouts/Header";
 
 import LandingPage from "./pages/LandingPage";
 import UsersPage from "./pages/UsersPage";
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/users" element={<UsersPage />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

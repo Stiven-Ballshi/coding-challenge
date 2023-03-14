@@ -1,32 +1,34 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
+import { getUsers } from "../services/users";
 
 import { Result } from "../types/users";
 
-import UserCard from "../components/UserCard";
+import UserCard from "../components/UserCard/UserCard";
 
-import styles from "./landing.module.scss";
+import styles from "./Landing.module.scss";
 
 function MainApp() {
   const [users, setUsers] = useState<Result[]>([]);
-  // const [loading, setLoading] = useState<boolean>(false);
 
   const fetchUsersInfo = async () => {
-    try {
-      // setLoading(true);
-      const response: any = await axios.get(
-        "https://randomuser.me/api/?results=10"
-      );
+    let usersNum = 0;
 
-      setUsers(response.data.results);
-    } catch (err) {
-      console.log(err);
-    }
+    const interval = setInterval(async () => {
+      if (usersNum < 10) {
+        try {
+          const response = await getUsers();
 
-    // setLoading(false);
+          setUsers((prevState) => [...prevState, ...response.data.results]);
+        } catch (err) {
+          console.log(err);
+        }
+        usersNum++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 1000);
   };
 
   useEffect(() => {
@@ -35,15 +37,10 @@ function MainApp() {
 
   return (
     <>
-      {/* {loading && (
-        <Box
-          sx={{ display: "flex", position: "absolute", top: "0", left: "0" }}
-        >
-          <CircularProgress />
-        </Box>
-      )} */}
       <div className={styles.landing}>
-        <UserCard users={users} />
+        <div className={styles.landing__container}>
+          <UserCard users={users} />
+        </div>
       </div>
     </>
   );

@@ -6,9 +6,9 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-import { Result } from "../types/users";
+import { Result } from "../../types/users";
 
-import { EmailIcon, MoreSettings, PhoneIcon } from "./CustomIcons";
+import { EmailIcon, MoreSettings, PhoneIcon } from "../CustomIcons";
 
 import styles from "./userCard.module.scss";
 
@@ -70,6 +70,27 @@ function UserCard({ users }: Props) {
               className={styles.userCard__wrapper}
             >
               <PhoneIcon /> {user.email || "Not Provided"}
+              <Typography
+                className={styles.userCard__info}
+                variant="h6"
+              ></Typography>
+            </Box>
+
+            <Box
+              style={{ color: checkTextColor(userIndex) }}
+              className={styles.userCard__wrapper}
+            >
+              <PhoneIcon /> {user.location.country || "Not Provided"}
+              <Typography
+                className={styles.userCard__info}
+                variant="h6"
+              ></Typography>
+            </Box>
+            <Box
+              style={{ color: checkTextColor(userIndex) }}
+              className={styles.userCard__wrapper}
+            >
+              <PhoneIcon /> {user.dob.age || "Not Provided"}
               <Typography
                 className={styles.userCard__info}
                 variant="h6"

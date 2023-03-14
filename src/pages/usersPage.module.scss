@@ -1,0 +1,75 @@
+.usersPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-direction: column;
+
+  margin-top: 20px;
+
+  &__card_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+    margin-top: 50px;
+  }
+
+  div[class*='MuiInputBase-root'] {
+    flex: 1;
+
+    color: white;
+  }
+
+  .filter {
+    color: white;
+
+    display: flex !important;
+    flex-direction: row;
+    column-gap: 50px;
+    align-items: center;
+
+    label[class*='MuiFormLabel-root'] {
+      color: white !important;
+
+      text-transform: capitalize;
+    }
+
+    div[class*='MuiSelect-select'] {
+      color: white
+    }
+
+    fieldset[class*='MuiOutlinedInput-notchedOutline'] {
+      border-color: white;
+
+      &:hover {
+        border-color: white;
+      }
+      
+      legend {
+        display: none;
+      }
+    }
+
+    svg {
+      color: white;
+      width: 20px;
+      height: 20px;
+
+      margin-right: 10px;
+    }
+
+    .slider {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      flex: 1;
+    }
+  }
+}
+
+.filterSelect__paper {
+  max-height: 350px;
+}

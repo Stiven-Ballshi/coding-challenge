@@ -48,3 +48,9 @@ export const MoreSettings = (
     <circle cx="21.1429" cy="3.61904" r="2.85714" fill="currentColor" />
   </svg>
 );
+
+export const DropdownIcon = () =>
+<svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 0.5L3.5 3L6.5 0.5" stroke="currentColor" strokeLinecap="round"/>
+</svg>
+
