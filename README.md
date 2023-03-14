@@ -52,6 +52,23 @@ sql
 
 5.  Open your web browser and go to `http://localhost:3000` to view the application.
 
+## Requirements
+
+Develop a React webapp consisting of two pages: on the first page you have to call the
+provided API every second from when the page loads. When the API has been called 10
+times, display the received data in a card for each user containing an avatar, their name,
+phone number and email.  
+On the second page call the API to get the data of 1000 fake user and filter them based on
+nationality or age and display them in cards as before.
+
+## Technical Requirements
+
+- Use MUI library for style, react Router for navigation and fetch to make the calls.
+- API to call: https://randomuser.me/
+- It must be written in Typescript
+- The project must be uploaded on your Github profile
+- Provide a README.md
+
 ## Build
 
 To build the production version of the application, run the following command:
